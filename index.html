@@ -1,0 +1,74 @@
+<script>
+	
+	<!-- var dataObj=[ -->
+		<!-- { -->
+			<!-- data:[ -->
+				<!-- { -->
+				<!-- name: "rahul",  -->
+				<!-- d2: [{rollno: 101}] -->
+				<!-- }, -->
+				
+				<!-- { -->
+				<!-- name: "bindu",  -->
+				<!-- d2: [{rollno: 102}] -->
+				<!-- } -->
+			<!-- ] -->
+		<!-- } -->
+	<!-- ] -->
+	
+	<!-- dataObj.map((val)=>{ -->
+		<!-- val.data.map((val2)=>{ -->
+			<!-- val2.d2.map((val3)=>{ -->
+				<!-- console.log(val3.rollno); -->
+			<!-- }); -->
+		<!-- }); -->
+	<!-- }); -->
+	
+	
+	
+	// fetching Api ---
+	
+	<!-- fetch(data) -->
+	<!-- .then((res)=>{ -->
+		<!-- return res.json(); -->
+	<!-- }) -->
+	<!-- .then((data)=>{ -->
+		<!-- console.log(data); -->
+		<!-- data.data.map((result)=>{ -->
+			<!-- console.log(result.username) -->
+		<!-- }); -->
+	<!-- }) -->
+	<!-- .catch((error)=>{ -->
+	  <!-- console.log("Data not Found"); -->
+	<!-- }) -->
+	
+	
+	var array = [
+		{class:'10', student: "A"},
+		{class:'10', student: "B"},
+		{class:'10', student: "C"},
+		{class:'10', student: "D"},
+		{class:'11', student: "E"},
+		{class:'11', student: "F"},
+		{class:'11', student: "G"},
+		{class:'11', student: "H"},
+		{class:'10', student: "I"}
+	];
+	
+	class10= [];
+	class11= [];
+	array.map((val)=>{
+		if(val.class === '10'){
+			class10.push(val.student);	
+				
+		}else{
+			class11.push(val.student);
+		}	
+		
+	});
+	
+	
+	console.log(class10);
+	
+
+</script>
